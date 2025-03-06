@@ -9,4 +9,5 @@ Below is a pictorial representation of the state of the grid after minutes 1, 2,
 '''
 class Solution:
     def coloredCells(self, n: int) -> int:
+        # Math formula can be calculated based on the pattern which occurs at n minutes
         return 2*(n**2)-2*n+1
