@@ -23,6 +23,10 @@ class Solution:
                 nums[i+1] = 1 - nums[i+1]
                 nums[i+2] = 1 - nums[i+2]
                 opsCount += 1
-        if all(nums[(i+1):]):
+        # if all(nums[(i+1):]):
+        # Slicing will create new list in memory
+        #     return opsCount
+        if all(x == 1 for x in nums[i+1:]):
+            # Using a generator will avoid slicing (creation of new list in memory) which is more efficient
             return opsCount
         return -1
